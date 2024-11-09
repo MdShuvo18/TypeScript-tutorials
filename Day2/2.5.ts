@@ -1,5 +1,5 @@
 {
-    //Encaptulation
+     // getter and setter
     class Bank {
         readonly id: number;
         name: string;
