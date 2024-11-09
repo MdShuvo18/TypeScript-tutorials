@@ -1,0 +1,14 @@
+1. Class and Constructor
+Q: How would you define a Car class in TypeScript that has the following properties: make, model, and year? The class should also include a constructor to initialize these properties. Additionally, implement a method getCarInfo() that returns a string containing all the car details.
+
+2. Inheritance
+Q: Explain inheritance in TypeScript with an example. Define a Person class with properties name and age, and a Student class that extends Person and adds an additional property grade. Implement a method getStudentInfo() in the Student class that returns a string with the name, age, and grade.
+
+3. Encapsulation (Private and Public Members)
+Q: What is the difference between public, private, and protected access modifiers in TypeScript? Write a class BankAccount with a balance property that should be private, a constructor to initialize the balance, and methods deposit and withdraw to manipulate the balance.
+
+4. Abstraction
+Q: How does abstraction work in TypeScript? Create an abstract class Shape with an abstract method area() that must be implemented by any subclass. Then, create a Rectangle class that extends Shape and implements the area() method. Calculate the area of a rectangle.
+
+5. Object Creation and Constructor Overloading
+Q: In TypeScript, can you overload constructors in the same way as other languages like Java or C#? If not, how can you achieve constructor overloading in TypeScript? Write a Person class where the constructor can accept either a name and age, or just a name. Show how you would implement this behavior.
