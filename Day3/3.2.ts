@@ -47,11 +47,11 @@
    }
    
     const student_ : Student = {id:12 , name: "Arifin"};
-    const changeName_ = getName1(student,"id");
+    const changeName_ = getName_(student,"id");
     console.log(changeName_)
 
     const teacher_ : Teacher = {_id:1, _name:"Shuvo"}
-    const changeName1_ = getName(teacher_,"_id");
+    const changeName1_ = getName_(teacher_,"_id");
     console.log(changeName1_)
     
 
