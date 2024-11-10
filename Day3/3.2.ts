@@ -47,7 +47,7 @@
    }
    
     const student_ : Student = {id:12 , name: "Arifin"};
-    const changeName_ = getName_(student,"id");
+    const changeName_ = getName_(student_, "id");
     console.log(changeName_)
 
     const teacher_ : Teacher = {_id:1, _name:"Shuvo"}
