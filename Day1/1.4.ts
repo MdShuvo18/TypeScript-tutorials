@@ -40,9 +40,10 @@
     const rec =(n: number)=>{
         //base case 
         if(n==0) return ;
+        
         //working 
         console.log(n)
         rec(n-1);
     }
-
+    rec(5);  // 5 4 3 2 1
 }
