@@ -20,8 +20,12 @@
     type AddExra2 ={
         salary: number
     }
-    interface Teacher2 extends User2 {
-        salary: number
+    interface Teacher2 extends AddExra2 {
+        dataBase: string
     }
-    
+    // insterface and type aliaes
+    interface Teacher3 extends User1 {
+        dataBase: string
+    }
+   
 }
