@@ -1,42 +1,51 @@
-{   
-
-    function takeArr(...arr: number[]): number[]{
-        return arr
+{
+    
+           //Use of rest parameter
+    function takeArr(...arr: number[]): number[] {
+        return arr;  // Rest parameter to accept multiple arguments and return them as an array
     }
     takeArr(1,2,3);
-    function takeArr1(arr: number[]): number[]{
-        return arr
+    function takeArr1(arr: number[]): number[] {
+        return arr;  // Accepts an array directly
     }
     takeArr1([1,2,3]);
 
 
-    //call by value and refferace
-      function callByRef ( val1 : {num: number}) : number{
-          val1.num= 1;
-          return val1.num 
-      }
-      function callNotByRef(val1: {num: number}[]): number {
-          //copy=clonedVal   || clonedVal = { num : 100}
-          const clonedVal = {...val1[0]};  
-          clonedVal.num = 1;  
-          return clonedVal.num; 
-      }
 
-    
-   
-      function main(){
-  
-          //call by ref
-          let val1 = { num : 100}
+     
+    // Call by Reference: Modifies the original object directly
+    function callByRef(val1: { num: number }): number {
+        val1.num = 1;  // Modifies the original object
+        return val1.num;
+    }
 
-          let notChange = callByRef(val1)
-          
-          //{ num : 100},{ num : 40} ,{ num : 100}
-          let data1 = callNotByRef([val1])
-          console.log(data1);
-          console.log(val1.num);
-          return 0;
-      }
-  
-      main();
+    // Call by Value: Clones the object to prevent modifying the original
+    function callByValue(...val1: { num: number }[]): number {
+        const clonedVal = { ...val1[0] };  // Create a shallow copy of the first object in the array
+        clonedVal.num = 1;  // Modify the copy
+        return clonedVal.num;  // Return the modified copy's num value
+    }
+
+    function main() {
+        // Call by Reference: Object will be modified
+        let val1 = { num: 100 };
+
+        console.log("Before callByRef:");
+        console.log("Original val1:", val1.num);  // 100
+
+        let refResult = callByRef(val1);  // Modify the original object
+        console.log("After callByRef:");
+        console.log("Returned from callByRef:", refResult);  // 1
+        console.log("Original val1 after callByRef:", val1.num);  // 1 (Modified)
+
+        console.log("\nBefore callByValue:");
+        console.log("Original val1:", val1.num);  // 1 (after callByRef)
+
+        let valueResult = callByValue(val1);  // Pass by value (cloning the object)
+        console.log("After callByValue:");
+        console.log("Returned from callByValue:", valueResult);  // 1 (Modified inside the function)
+        console.log("Original val1 after callByValue:", val1.num);  // 1 (Unchanged by callByValue)
+    }
+
+    main();
 }
