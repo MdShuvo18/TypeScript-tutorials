@@ -4,7 +4,7 @@
      * Object
      * Constructor
      * inheritance
-     * incaptulation
+     * Encaptulation
      * Abstraction
      * Polymorphism 
      * (I give a overview on the Difference Between Polymorphism and Abstraction bellow    )
@@ -18,7 +18,7 @@
 {
     //========  Difference Between Polymorphism and Abstraction ====
     /*
-    ***1. ____________Abstraction__________________
+    ***1. ____________ Abstraction __________________
 
         What it is: Abstraction is about hiding unnecessary details and exposing only the essential features or functionalities of an object. It lets you focus on what an object does, rather than how it does it.
 
@@ -45,7 +45,7 @@
 
 
          /*
-    ***1. ____________Polymorphism__________________
+    ***1. ____________ Polymorphism __________________
 
         What it is: Polymorphism allows different objects to be treated as instances of the same class (or interface) but behave differently based on their actual type. It’s the concept of one method doing different things based on the object calling it.
 
