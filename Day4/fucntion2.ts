@@ -1,16 +1,5 @@
 {
     
-           //Use of rest parameter
-    function takeArr(...arr: number[]): number[] {
-        return arr;  // Rest parameter to accept multiple arguments and return them as an array
-    }
-    takeArr(1,2,3);
-    function takeArr1(arr: number[]): number[] {
-        return arr;  // Accepts an array directly
-    }
-    takeArr1([1,2,3]);
-
-
 
      
     // Call by Reference: Modifies the original object directly
