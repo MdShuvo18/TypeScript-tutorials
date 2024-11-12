@@ -14,8 +14,9 @@ Overall, the project is an in-depth TypeScript learning resource, ideal for deve
 ## Setup in local
 ### First install
 ```
-    npm init -y
-   npm install ts-node typescript --save-dev
+   npm init -y
+   npm install ts-node  --save-dev
+   npm install -g typescript
    npx tsc --init
 ```
 ### Run the code
