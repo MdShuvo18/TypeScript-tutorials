@@ -21,7 +21,7 @@ const Component8 = (): JSX.Element => {
 
     // way 2
 
-    const forData = new FormData(e.currentTarget);
+    const forData = new FormData(e.currentTarget) ;
     const data = Object.fromEntries(forData) ;
     console.log(data);
     };
