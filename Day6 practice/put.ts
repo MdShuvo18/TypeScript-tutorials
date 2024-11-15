@@ -83,3 +83,40 @@ const putRequest1 = async <T>(url: string, body?: Record<string, any>): Promise<
   
 
   
+
+  //===========in React==========
+  /*
+
+  //npm install @tanstack/react-query
+
+import { useMutation } from '@tanstack/react-query';
+
+// Generic function for PUT request
+const putData = async <T>(url: string, data: T): Promise<T> => {
+  
+  const res = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Failed to PUT data: ${res.statusText}`);
+  }
+
+  return res.json();
+};
+
+// Reusable custom hook for PUT requests
+const usePutData = <T>(url: string) => {
+  return useMutation<T, Error, T>({
+    mutationFn: (data: T) => putData<T>(url, data), // Call the putData function
+  });
+};
+
+export { usePutData };
+
+
+  */

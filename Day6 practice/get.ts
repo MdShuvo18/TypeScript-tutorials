@@ -113,4 +113,40 @@ const getDatasWithParam1 = async () => {
 
 getDatasWithParam1();
 
+
+//============use in react ============
+/**
+ //npm install @tanstack/react-query
+
+ import { useQuery } from '@tanstack/react-query';
+
+// Generic fetch function for GET requests
+const fetchData = async <T>(url: string, params?: Record<string, string>): Promise<T[]> => {
+ const queryString = params ? '?' + new URLSearchParams(params).toString() : '';
+ 
+  const res = await fetch(url + queryString, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch data: ${res.statusText}`);
+  }
+
+  return res.json();
+};
+
+// Reusable custom hook for GET requests
+const useFetchData = <T>(url: string, params?: Record<string, string>) => {
+  return useQuery<T[], Error>({
+    queryKey: [url, params], // Query key is based on the URL and parameters
+    queryFn: () => fetchData<T>(url, params), // Call the fetchData function
+  });
+};
+
+export default useFetchData;
+
+ */
   

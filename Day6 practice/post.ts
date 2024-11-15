@@ -81,4 +81,38 @@ const postRequest = async <T>(url: string, body?: { [key: string]: any }): Promi
   
   
 
-   
+  //===========in React==========
+  /*
+  //npm install @tanstack/react-query
+
+  
+  import { useMutation } from '@tanstack/react-query';
+
+// Generic function for POST request
+const postData = async <T>(url: string, data: T): Promise<T> => {
+  
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Failed to POST data: ${res.statusText}`);
+  }
+
+  return res.json();
+};
+
+// Reusable custom hook for POST requests
+const usePostData = <T>(url: string) => {
+  return useMutation<T, Error, T>({
+    mutationFn: (data: T) => postData<T>(url, data), // Call the postData function
+  });
+};
+
+export { usePostData };
+
+  */
