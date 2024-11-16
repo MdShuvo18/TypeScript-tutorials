@@ -1,8 +1,9 @@
 {
     // array , object
-    type Number = number[]
-    let arr : Number = [1, 2, 3, 4];
-    let boolArr : boolean[]=[false, true];
+    type Boolean=boolean[]
+    let arr : number[] = [1, 2, 3, 4];
+    let boolArr : Boolean=[false, true];
+    console.log("This is array",arr);
 
     //Object
     type User  = {
