@@ -6,18 +6,18 @@
     console.log("This is array",arr);
 
     //Object
-    type User  = {
-        id:string , 
-        name:string,
-        email:string,
-    }
+    // type User  = {
+    //     id:string , 
+    //     name:string,
+    //     email:string,
+    // }
     interface InterUser {
-        id:string , 
+        id:number , 
         name:string,
         email:string,
     }
     const user :InterUser ={
-        id:"945D",
+        id:1,
         name:"Rakb",
         email:"emon@gmail.com",
     }
